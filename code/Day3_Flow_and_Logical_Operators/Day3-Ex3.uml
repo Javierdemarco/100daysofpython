@@ -1,0 +1,24 @@
+@startuml
+
+start
+
+if ("Is it cleanly divisible by 4?") then (no)
+    #red:Not Leap;
+    stop
+else (yes)
+    if ("Is it cleanly divisible by 100?") then (no)
+        #green:Leap;
+        stop
+    else (yes)
+        if ("Is it cleanly divisible by 400?") then (no)
+            #red:Not Leap;
+            stop
+        else (yes)
+            #green:Leap;
+            stop
+        endif
+    endif
+endif
+
+
+@enduml

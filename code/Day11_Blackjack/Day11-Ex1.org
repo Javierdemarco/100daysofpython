@@ -1,0 +1,37 @@
+# Blackyack UML
+#+startup:inlineimages
+
+#+begin_src plantuml :file blackyack.png
+@startuml
+start
+:Do you want to play a game of Blackyack?;
+:Print Logo;
+:Give Player 2 cards;
+:Give Computer 1 card;
+:Show info of cards, score and card of computer;
+while (player says y to new card)
+    :Give player a card;
+    if (PlayerScore) then ( > 21)
+        :Computer Wins;
+        stop
+    else (< 21)
+    endif
+endwhile
+->n;
+:Calculate Player score;
+while (ComputerScore < 17 or ComputerScore < PlayerScore)
+    :Give Computer a card;
+    if (ComputerScore) then (> 21)
+      :Player Wins;
+      stop
+    else (< 21)
+    endif
+endwhile
+:Calculate Computer score;
+:Compare them and declare winner;
+stop
+@enduml
+#+end_src
+
+#+RESULTS:
+[[file:blackyack.png]]

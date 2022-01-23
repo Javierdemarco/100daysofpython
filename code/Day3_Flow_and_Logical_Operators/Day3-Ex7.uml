@@ -1,0 +1,28 @@
+@startuml
+start
+:Welcome to Treasure Island.\nYour mission is to find the treasure.;
+if (Left of right) then (Right or anything else)
+    :Fall into a hole.\nGame over;
+    stop
+else (Left)
+    if (Swim or wait) then (Swim or anything else)
+        :Attacked by trout.\nGame over.;
+        stop
+    else (Wait)
+        if (Which door) then (Red)
+            :Burned by fire.\nGame Over;
+            stop
+        else if (Yellow) then (yes)
+            :You Win!;
+            stop
+        (no) else if (Blue) then (yes)
+            :Game Over.;
+            stop
+        else (Anything else)
+            :Eaten by beasts.\nGame Over.;
+            stop
+        endif
+    endif
+endif
+
+@enduml

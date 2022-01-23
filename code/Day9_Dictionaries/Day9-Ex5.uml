@@ -1,0 +1,20 @@
+@startuml
+start
+
+:Print logo and welcome message;
+:Ask for the first name;
+:Ask for the first bid;
+while (There is more people) is (yes)
+    :Ask for name of the person;
+    :Ask for the bid;
+    :Add to dictionary of bids;
+endwhile (no)
+
+repeat
+    :Compare each bid to see which is the highest;
+    :Save the highest bid and person form the dictionary;
+repeat while (There is bids on the dictionary bids) is (yes)
+->no;
+:Print the winner;
+stop
+@enduml

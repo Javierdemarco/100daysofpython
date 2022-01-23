@@ -1,0 +1,19 @@
+@startuml
+
+start
+
+if ("Height > 120cm?") then (no)
+    #red:Can't ride;
+    stop
+else (yes)
+    :Can Ride;
+    if ("age") then (18 or under)
+        :$7;
+        stop
+    else (Over 18)
+        :$12;
+        stop
+    endif
+endif
+
+@enduml
