@@ -19,5 +19,7 @@ while on:
         order = menu.find_drink(option)
         if order is None:
             print("That option is not available.")
-        if coffee_maker.is_resource_sufficient(order) and money_machine.make_payment(order.cost):
-                coffee_maker.make_coffee(order)
+        if coffee_maker.is_resource_sufficient(order) and money_machine.make_payment(
+            order.cost
+        ):
+            coffee_maker.make_coffee(order)
